@@ -9,6 +9,7 @@
   "dependencies": {
     "express": "2.4.6",
     "jade": ">= 0.0.1",
-    "vows": ">= 0.5.11"
+    "vows": ">= 0.5.11",
+    "mongoose": ">= 2.0.2"
   }
 }

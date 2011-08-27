@@ -2,10 +2,18 @@
 /**
  * Module dependencies.
 */
+_ = require("./vendor/underscore");
 
-var express = require('express');
+var Server = {},
+    express = require('express'),
+    path = require("path"),
+    sys = require("sys"),
+    application_root = __dirname;
 
-var app = module.exports = express.createServer();
+global.Server = Server;
+Server.root = application_root;
+global.app = express.createServer();
+
 
 // Configuration
 
@@ -15,22 +23,19 @@ require('./vendor/nko')('lyXvQ3xB5YL3dZv0', function(err, res) {
     console.error(err.stack);
   }
 });
-app.configure(function(){
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
+
+Server.setup = require("./lib/setup.js").setup({
+  app: app,
+  mongoose: require("mongoose"),
+  express: express,
+  paths: {
+    views: path.join(application_root, "app", "views"),
+    root: path.join(application_root, "public"),
+    controllers: path.join(application_root, "app", "controllers"),
+    models: path.join(application_root, "app", "models")
+  }
 });
 
-app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
-});
-
-app.configure('production', function(){
-  app.use(express.errorHandler()); 
-});
 
 // Routes
 
@@ -40,5 +45,4 @@ app.get('/', function(req, res){
   });
 });
 
-app.listen(8080);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
