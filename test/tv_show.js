@@ -29,17 +29,17 @@ vows.describe('TV Show').addBatch({
 	  }
   }
 }).addBatch({
-	'search for an existing tv show on our database': {
-		topic: function () {
-			show = new TvShow();
-			show.name = 'Lost';
-			show.tvdb_id = 123;
-			show.save();
-			
-			return TvShow.search('Lost')
-		},
-		'should receive an array': function (topic) {
-			assert.include(topic, show);
-		}
-	}
+	// 'search for an existing tv show on our database': {
+	// 	topic: function () {
+	// 		show = new TvShow();
+	// 		show.name = 'Lost';
+	// 		show.tvdb_id = 123;
+	// 		show.save();
+	// 		
+	// 		return TvShow.search('Lost')
+	// 	},
+	// 	'should receive an array': function (topic) {
+	// 		assert.include(topic, show);
+	// 	}
+	// }
 }).export(module);
