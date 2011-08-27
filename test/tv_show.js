@@ -1,8 +1,9 @@
 var vows = require('vows'),
     assert = require('assert');
-    require('../app/models/tv_show');
-    require('../app/models/season');
-    require('../app/models/episode');
+
+require('../app/models/tv_show');
+require('../app/models/season');
+require('../app/models/episode');
 
 
 vows.describe('TV Show').addBatch({
@@ -11,22 +12,11 @@ vows.describe('TV Show').addBatch({
 	show = new TvShow();
 	show.name = 'Test';
 	show.save();
+	return show;
 	},
 
         'we get Infinity': function (topic) {
-            assert.equal (topic, Infinity);
-        }
-    },
-    'but when dividing zero by zero': {
-        topic: function () { return 0 / 0 },
-
-        'we get a value which': {
-            'is not a number': function (topic) {
-                assert.isNaN (topic);
-            },
-            'is not equal to itself': function (topic) {
-                assert.notEqual (topic, topic);
-            }
+            assert.equal (topic.name, 'Test');
         }
     }
 }).export(module);
