@@ -37,13 +37,4 @@ Server.setup = require("./lib/setup.js").setup({
   }
 });
 
-
-// Routes
-
-app.get('/', function(req, res){
-  res.render('index', {
-    title: 'Express'
-  });
-});
-
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
