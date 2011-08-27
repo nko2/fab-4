@@ -8,3 +8,7 @@ var schema = new mongoose.Schema({
 });
 
 TvShow = mongoose.model('TvShow', schema);
+
+TvShow.search = function(show_name) {
+	return this.find({}).where({title: /show_name/});
+};
