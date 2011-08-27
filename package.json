@@ -1,0 +1,8 @@
+{
+  "name": "thetvherald",
+  "subdomain": "thetvherald",
+  "scripts": {
+    "start": "server.js"
+  },
+  "version": "0.0.1"
+}
