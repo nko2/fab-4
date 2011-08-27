@@ -1,13 +1,14 @@
 {
   "name": "thetvherald",
-    "version": "0.0.1",
-    "subdomain": "thetvherald",
-    "scripts": {
-      "start": "app.js"
-    },
-    "private": true,
-    "dependencies": {
-      "express": "2.4.6",
-      "jade": ">= 0.0.1"
-    }
+  "version": "0.0.1-1",
+  "subdomain": "thetvherald",
+  "scripts": {
+    "start": "app.js"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "2.4.6",
+    "jade": ">= 0.0.1",
+    "vows": ">= 0.5.11"
+  }
 }
