@@ -3,13 +3,14 @@
  * Module dependencies.
 */
 _ = require("./vendor/underscore");
-
 var Server = {},
     express = require('express'),
     path = require("path"),
     sys = require("sys"),
     application_root = __dirname;
 
+require.paths.push(application_root + "/lib");
+require.paths.push(application_root + "/app/models");
 global.Server = Server;
 Server.root = application_root;
 global.app = express.createServer();

@@ -1,6 +1,7 @@
 var mongoose = require("mongoose");
 var sys = require("sys");
 var schema = new mongoose.Schema({
+  name : { type: String }
 });
 
-mongoose.model('Episode', schema);
+Episode = module.exports = mongoose.model('Episode', schema);

@@ -6,6 +6,4 @@ var schema = new mongoose.Schema({
   , bio   :  { type: String, match: /[a-z]/ }
   , date  :  { type: Date, default: Date.now }
  });
-
-mongoose.model('User', schema); 
-
+User = module.exports = mongoose.model('User', schema);

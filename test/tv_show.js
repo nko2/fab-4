@@ -1,13 +1,14 @@
 var vows = require('vows'),
-    assert = require('assert'),
-		mongoose = require('mongoose'),
-		tv_show = mongoose.model('TvShow'),
+    assert = require('assert');
+    require('../app/models/tv_show');
+    require('../app/models/season');
+    require('../app/models/episode');
 
 
 vows.describe('TV Show').addBatch({
 	'save a show': {
         topic: function () {
-	show = new tv_show();
+	show = new TvShow();
 	show.name = 'Test';
 	show.save();
 	},
