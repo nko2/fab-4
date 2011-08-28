@@ -1,32 +1,46 @@
 body {
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	height: 100%;
 	background-color: #bab595;;
 	background: -moz-linear-gradient(top, #bab595, #aaa585);
 	background: -webkit-gradient(linear, left top, left bottom, from(#bab595), to(#aaa585));
 }
 
+div#content { height: 100%
+}
+
+div#banner.img { float:left;
+	position: absolute}
+
 div#banner { 
-	position: absolute;
-	box-shadow: 5px 5px 5px #000;
+	width: 100%;
+	height: 140px;
+	position: relative;
+	float: left;	
 	border: solid 1px #ffffff;
 	background: -moz-linear-gradient(top, #fbfafb, #d0d1d1);
 	background: -webkit-gradient(linear, left top, left bottom, from(#fbfafb), to(#d0d1d1));
-	height: 600px;
 	background-color: white;
 }
+div#text { 
+	float: right;
+	padding: 15px;
+}
 
-div#vote { float: top right
+div#vote { float: right;
 }
 
 div#bd { 
 	padding: 50px 50px 50px 50px;
+	height: 100%;
 }
-	
+
 h1 { 
-	text-shadow: 5px 5px 0px #eee, 7px 7px 0px #707070;
+	text-shadow: 3px 3px 0px #eee, 4px 4px 0px #808080;
 }
 
 h2 { 
+	font-size: 10pt;
 	text-shadow: 0px 2px 3px #666;
 }
 
@@ -37,7 +51,11 @@ h3 {
 }
 
 div#bottom { 
+	position: absolute;
 	float: bottom;
+	bottom: 0;
+	width: 100%;
+	height: 300px;
 	background: -moz-linear-gradient(top, #2e2d2d, #000000);
 	background: -webkit-gradient(linear, left top, left bottom, from(#2e2d2d), to(#000000));
 	background: #2e2d2d;
