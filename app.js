@@ -4,7 +4,7 @@ var express = require('express');
 var app = module.exports = express.createServer();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/restmvc');
+mongoose.connect('mongodb://nodejitsu:da4b26fb2a01fec150807f8986f18730@staff.mongohq.com:10025/nodejitsudb556019565051');
 
 require('./vendor/nko')('lyXvQ3xB5YL3dZv0', function(err, res) {
   if (err) {
