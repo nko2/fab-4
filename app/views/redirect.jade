@@ -1,8 +1,8 @@
 !!! 5
 html
  head
-  title= The TV Herald
-  link(rel='stylesheet', href='/public/stylesheets/style.css'))
+  title The TV Herald
+  link(rel='stylesheet', href='/stylesheets/style.css')
  
  body
   #all
@@ -10,8 +10,14 @@ html
     #logo1
      img(src='/images/logo.png', title='The TV Herald', name='logo')
     #menu
-   #content
-    #center
-     h1 Series
+     tr(cellspacing='5')
+      td menu1
+       a.menu(href='/app/views/index.jade', title='Home') HOME
+      td menu2
+       a.menu(href='http://teste.thetvherald.nodejitsu.com/signin', title='Login') LOGIN     
+    #content
+     #center
+      h1 Series
+      p
    #bottom
-    p2 abcdef
+    p Created by | #F4b

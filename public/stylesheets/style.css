@@ -2,7 +2,9 @@ body {
 	margin:50px 50px 50px 50px;
 	padding: 20px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	background-color: #bab595;
+	background-color: #bab595;;
+	background: -moz-linear-gradient(top, #bab595, #aaa585);
+	background: -webkit-gradient(linear, left top, left bottom, from(#bab595), to(#aaa585));
 	height: 100%;
 }
 
@@ -12,7 +14,7 @@ div#all {min-height: 100%;
 div#logo1 { float: left;
 }
 
-div#top { height:300px
+div#top { height:300px;
 }
 
 div#menu {	margin-left: 290px;
@@ -25,9 +27,11 @@ div#menu {	margin-left: 290px;
 	border-radius: 10px;
 }
 
-div#links {
-	text-align:center;
+hr { color: #4158f3;
+	box-shadow: 5px 5px 5px #000;
+	height: 1px
 }
+
 h1 { 
 	font-family: "Arial Black";
 	font-size: 24pt;
@@ -42,28 +46,56 @@ h2 {
 	text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-	a.menu:link {font-size: 18px;
+div#teste2 { float:center}
+
+div#links {
+		height: 30px;
+		position: relative;
+		box-shadow: 6px 6px 6px #3a3939;
+		background: #6d79ca;
+		background: -moz-linear-gradient(top, #6d79ca, #1d31b9);	
+		background: -webkit-gradient(linear, left top, left bottom, from(#6d79ca), to(#1d31b9));
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px; 
+		border-radius: 5px;
+		box-shadow: 6px 6px 6px #3a3939;
+}
+
+a.menu { margin-left: 20px;
+}
+
+a.menu:link {font-size: 18px;
+		font-family: "Arial Black";
+		text-shadow: 0.1em 0.1em 0.2em black;
+		text-decoration: none;
+		color: #000000;
+		position:absolute;
+}
+
+a.menu:visited {text-decoration: none;
+		font-size: 18px;
 		font-family: "Arial Black";
 		text-shadow: 0.1em 0.1em 0.2em black;
 		text-decoration: none;
 		color: #000000;
 }
-	a.menu:visited {text-decoration: none;
+
+a.menu:hover {text-decoration: none;
+		font-size: 18px;
+		font-family: "Arial Black";
+		text-shadow: 0.1em 0.1em 0.2em black;
+		text-decoration: none;
 		color: #000000;
 }
-	a.menu:hover {text-decoration: none;
-		color: #000000;
-		background-image:url('/images/hover.png');
-		box-shadow: 2px 2px 2px #000;
-}
-	a.menu:active {text-decoration: none;
+
+a.menu:active {text-decoration: none;
 }
 
 div#center {
 	font-family: Arial;
 	background-color: white;
 	box-shadow: 5px 5px 5px #000;
-	border: solid 1px;
+	border: solid 1px #ffffff;
 	background: #FFFFFF;
 	background: -moz-linear-gradient(top, #FFFFFF, #d3d3d3);
 	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#d3d3d3)); 
@@ -72,7 +104,6 @@ div#center {
 	border-radius: 10px;
 }
 	
-
 div#bottom {
 	float: bottom;
 	margin: 15px;
