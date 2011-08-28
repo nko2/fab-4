@@ -1,0 +1,16 @@
+!!! 5
+html(lang="en")
+  head
+    title="Create new Person"
+  body
+  form(method="post", action="/people")
+    fieldset
+      legend Name
+      p
+        label(for="person[firstName]") First Name:
+          input(type="text", name="person[firstName]")
+      p
+        label(for="person[lastName]") Last Name:
+          input(type="text", name="person[lastName]")
+    p.buttons
+      input(type="submit", value="Save")
