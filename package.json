@@ -1,8 +1,12 @@
 {
-  "name": "tvherald",
+  "name": "thetvherald",
   "version": "0.1.1",
+  "subdomain": "thetvherald",
   "main": "./index.js",
   "directories": {"lib": "./lib"},
+  "scripts": {
+    "start": "node app.js"
+  },
   "engines": {
     "node": ">= 0.4.1"
   },
